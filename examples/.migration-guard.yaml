@@ -1,0 +1,18 @@
+# .migration-guard.yaml — project config
+# Place this in your repo root. migration-guard will find it automatically.
+
+# Minimum severity to fail CI (low / medium / high / critical)
+fail_on: high
+
+# Rule IDs to skip globally
+skip_rules: []
+  # - NO_ROLLBACK         # if your team doesn't use rollback migrations
+  # - INDEX_WITHOUT_CONCURRENTLY  # if you're not on PostgreSQL
+
+# Paths to ignore (glob patterns)
+ignore_paths: []
+  # - migrations/seeds/**
+  # - migrations/fixtures/**
+
+# Show fix suggestions in output
+verbose: false
