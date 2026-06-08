@@ -37,12 +37,16 @@ migration-guard check migrations/0042_add_score.sql
 
 ## Install
 
+Install from GitHub (not yet published to PyPI):
+
 ```bash
-pip install migration-guard
+pip install "git+https://github.com/MONISMALIK1/migration-guard.git"
 
 # With YAML config support:
-pip install "migration-guard[yaml]"
+pip install "migration-guard[yaml] @ git+https://github.com/MONISMALIK1/migration-guard.git"
 ```
+
+Or from a clone: `git clone … && cd migration-guard && pip install ".[yaml]"`.
 
 ---
 
@@ -128,10 +132,10 @@ jobs:
   migration-guard:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
         with: { python-version: '3.12' }
-      - run: pip install migration-guard
+      - run: pip install "git+https://github.com/MONISMALIK1/migration-guard.git"
       - run: migration-guard scan migrations/ --fail-on high --verbose
 ```
 
