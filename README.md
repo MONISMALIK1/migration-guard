@@ -1,5 +1,7 @@
 # migration-guard 🛡️
 
+[![tests](https://github.com/MONISMALIK1/migration-guard/actions/workflows/tests.yml/badge.svg)](https://github.com/MONISMALIK1/migration-guard/actions/workflows/tests.yml)
+
 **Catch dangerous database migrations before they reach production. No SaaS. No sign-up. One CLI.**
 
 Your engineer added `NOT NULL` to a 50M-row table with no default and no rollback. The migration locked the table for 4 hours. Production was down.
