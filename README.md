@@ -183,7 +183,7 @@ migration_guard/
 
 ```bash
 pip install pytest click
-pytest tests/ -v   # 42 tests, no external dependencies
+pytest tests/ -v   # 73 tests, no external dependencies
 ```
 
 ---
